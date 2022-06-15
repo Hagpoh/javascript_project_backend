@@ -32,7 +32,6 @@ async function getData (loc) {
     fDrink: strDrink,
     fImage: strDrinkThumb
   }
-
   return fData
 }
 
