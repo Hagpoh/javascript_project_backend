@@ -9,11 +9,11 @@ const connectionString =
 
 let PORT = process.env.PORT || 3000
 
+app.use(cors())
+
 MongoClient.connect(connectionString).then(client => {
   const db = client.db('cocktail-recommendation-history')
   const cocktailCollection = db.collection('cocktails')
-
-  app.use(cors())
 
   app.listen(PORT, () => {
     console.log('Listening on port: ', PORT)
